@@ -14,13 +14,13 @@ const scopes= [
     "user-top-read",
     "user-modify-playback-state",
 ];
-
+//obtener token de la url
 export const getTokenFromUrl= () => {
     return window.location.hash
     .substring(1)
     .split('&')
     .reduce((initial, item) =>{
-        //#accessToken=mysecretkey&name=sonny
+        
         let parts = item.split('=')
         initial[parts[0]] = 
         decodeURIComponent(parts[1]);
@@ -32,3 +32,8 @@ export const getTokenFromUrl= () => {
 export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
     "%20"
     )}&response_type=token&show_dialog=true`
+
+
+    //react contect o redux
+    //session & local storage
+    // react router
