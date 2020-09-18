@@ -36,10 +36,11 @@ function App() {
           })
         })
       }
-         
+        
      
        }, []);
-         
+         console.log("person",user);
+         console.log("token", token);
         
     return(
       <div className="app">
